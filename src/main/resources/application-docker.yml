@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: movie-info-service
+  webflux:
+    base-path: /movies/api
+
+server:
+  port: 8002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8762/eureka/
+  instance:
+    hostname: ${spring.application.name}
+    appname: ${spring.application.name}
+
+movie-api:
+  url: https://unelmamovie.com/api/v1
+  token: 309|X3qhv5BB2zzgLHI1wWlLatv5uYgNwcJjdLaMa1GI
+
+
